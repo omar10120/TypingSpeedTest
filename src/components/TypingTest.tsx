@@ -36,7 +36,7 @@ export default function TypingTest({ duration = 60 }: TypingTestProps) {
       words.push(commonWords[randomIndex]);
     }
     return words;
-  }, []);
+  }, [commonWords]);
 
   useEffect(() => {
     setWordList(generateWords());
