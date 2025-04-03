@@ -2,14 +2,14 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { calculateWPM, calculateAccuracy } from '@/utils/calculations';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface TypingTestProps {
   duration?: number;
 }
 
 export default function TypingTest({ duration = 60 }: TypingTestProps) {
-  const [text, setText] = useState('');
+  
   const [currentWord, setCurrentWord] = useState('');
   const [timeLeft, setTimeLeft] = useState(duration);
   const [isActive, setIsActive] = useState(false);
